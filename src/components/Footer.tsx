@@ -2,14 +2,36 @@
 
 import React from 'react';
 import { Instagram, Facebook, Twitter, ShieldCheck } from 'lucide-react';
+import { useNavigate, useLocation, Link } from 'react-router-dom';
 
 const Footer = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (href.startsWith('/#')) {
+      e.preventDefault();
+      const targetId = href.replace('/#', '');
+      
+      if (location.pathname !== '/') {
+        navigate('/');
+        setTimeout(() => {
+          const element = document.getElementById(targetId);
+          if (element) element.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      } else {
+        const element = document.getElementById(targetId);
+        if (element) element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
+
   return (
     <footer className="bg-black text-white pt-24 pb-12">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-4 gap-12 mb-16">
           <div className="col-span-1 md:col-span-2 space-y-8">
-            <a href="/" className="flex items-center gap-2">
+            <Link to="/" className="flex items-center gap-2">
               <div className="flex flex-col leading-none">
                 <span className="text-3xl font-black tracking-tighter text-white">ACCRA</span>
                 <span className="text-[12px] tracking-[0.3em] text-white/70 font-medium">RESTAURANT</span>
@@ -19,7 +41,7 @@ const Footer = () => {
                 <div className="w-1.5 h-8 bg-[#FCD116]" />
                 <div className="w-1.5 h-8 bg-[#006B3F]" />
               </div>
-            </a>
+            </Link>
             <div className="space-y-4">
               <p className="text-white/50 max-w-sm leading-relaxed">
                 Bringing the authentic flavors and warm hospitality of Ghana to Toronto. Experience tradition, taste heritage.
@@ -44,10 +66,10 @@ const Footer = () => {
           <div className="space-y-6">
             <h4 className="font-bold uppercase tracking-widest text-sm text-[#FCD116]">Quick Links</h4>
             <ul className="space-y-4 text-white/50">
-              <li><a href="#story" className="hover:text-white transition-colors">Our Story</a></li>
-              <li><a href="#dishes" className="hover:text-white transition-colors">Signature Dishes</a></li>
-              <li><a href="/menu" className="hover:text-white transition-colors">Full Menu</a></li>
-              <li><a href="#order" className="hover:text-white transition-colors">Order Online</a></li>
+              <li><a href="/#story" onClick={(e) => handleLinkClick(e, '/#story')} className="hover:text-white transition-colors">Our Story</a></li>
+              <li><a href="/#dishes" onClick={(e) => handleLinkClick(e, '/#dishes')} className="hover:text-white transition-colors">Signature Dishes</a></li>
+              <li><Link to="/menu" className="hover:text-white transition-colors">Full Menu</Link></li>
+              <li><a href="/#order" onClick={(e) => handleLinkClick(e, '/#order')} className="hover:text-white transition-colors">Order Online</a></li>
             </ul>
           </div>
 
