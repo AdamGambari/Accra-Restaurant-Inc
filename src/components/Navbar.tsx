@@ -17,13 +17,16 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Prevent scrolling when menu is open
+  // Handle body scroll lock
   useEffect(() => {
     if (isMenuOpen) {
       document.body.style.overflow = 'hidden';
     } else {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = '';
     }
+    return () => {
+      document.body.style.overflow = '';
+    };
   }, [isMenuOpen]);
 
   const navLinks = [
@@ -37,19 +40,18 @@ const Navbar = () => {
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
     
-    // Close menu immediately
+    // 1. Close the menu immediately
     setIsMenuOpen(false);
     
-    // Find element and scroll
+    // 2. Find the target element
     const targetId = href.replace('#', '');
     const element = document.getElementById(targetId);
     
     if (element) {
-      // We use a very slight delay to ensure the 'overflow: hidden' is removed 
-      // from the body before the browser attempts to scroll
-      requestAnimationFrame(() => {
+      // 3. Scroll to it after a tiny delay to let the body unlock
+      setTimeout(() => {
         element.scrollIntoView({ behavior: 'smooth' });
-      });
+      }, 10);
     }
   };
 
@@ -57,7 +59,7 @@ const Navbar = () => {
     <>
       <nav className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 py-4",
-        isScrolled || isMenuOpen ? "bg-black/90 backdrop-blur-md py-3 shadow-lg" : "bg-transparent"
+        isScrolled || isMenuOpen ? "bg-black/95 backdrop-blur-md py-3 shadow-lg" : "bg-transparent"
       )}>
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <a href="/" className="flex items-center gap-2 group z-50">
@@ -91,8 +93,8 @@ const Navbar = () => {
 
       {/* Full Screen Overlay Menu */}
       <div className={cn(
-        "fixed inset-0 bg-black z-40 flex flex-col items-center justify-center transition-all duration-500 ease-in-out",
-        isMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+        "fixed inset-0 bg-black z-40 flex flex-col items-center justify-center transition-all duration-300 ease-in-out",
+        isMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none invisible"
       )}>
         {/* Decorative Background Elements */}
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none opacity-20">
@@ -111,14 +113,14 @@ const Navbar = () => {
                 "text-4xl md:text-6xl font-black text-white hover:text-[#FCD116] transition-all duration-300 transform hover:scale-110",
                 isMenuOpen ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
               )}
-              style={{ transitionDelay: isMenuOpen ? `${index * 100}ms` : '0ms' }}
+              style={{ transitionDelay: isMenuOpen ? `${index * 50}ms` : '0ms' }}
             >
               {link.name}
             </a>
           ))}
           
           <div className={cn(
-            "mt-8 transition-all duration-500 delay-500",
+            "mt-8 transition-all duration-500 delay-300",
             isMenuOpen ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
           )}>
             <Button className="bg-[#006B3F] hover:bg-[#006B3F]/90 text-white rounded-none px-12 py-8 text-xl font-bold">
@@ -130,7 +132,7 @@ const Navbar = () => {
 
         {/* Social Links in Menu */}
         <div className={cn(
-          "absolute bottom-12 left-0 right-0 flex justify-center gap-8 transition-all duration-500 delay-700",
+          "absolute bottom-12 left-0 right-0 flex justify-center gap-8 transition-all duration-500 delay-500",
           isMenuOpen ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
         )}>
           <span className="text-white/40 text-xs uppercase tracking-[0.5em]">Follow the flavor</span>
