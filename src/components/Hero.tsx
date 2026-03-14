@@ -3,8 +3,11 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Phone, UtensilsCrossed } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const Hero = () => {
+  const navigate = useNavigate();
+
   return (
     <section className="relative h-screen w-full overflow-hidden flex items-center">
       {/* Background Image with Overlay */}
@@ -33,7 +36,10 @@ const Hero = () => {
           </p>
           
           <div className="flex flex-wrap gap-4 pt-4 animate-in fade-in slide-in-from-bottom duration-1000 delay-500">
-            <Button className="bg-white text-black hover:bg-[#FCD116] transition-colors rounded-none px-8 py-6 text-lg font-bold group">
+            <Button 
+              onClick={() => navigate('/menu')}
+              className="bg-white text-black hover:bg-[#FCD116] transition-colors rounded-none px-8 py-6 text-lg font-bold group"
+            >
               <UtensilsCrossed className="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform" />
               View Menu
             </Button>

@@ -3,6 +3,7 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { ChevronRight } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const categories = [
   {
@@ -40,6 +41,8 @@ const categories = [
 ];
 
 const MenuPreview = () => {
+  const navigate = useNavigate();
+
   return (
     <section id="menu" className="py-24 bg-zinc-50">
       <div className="max-w-7xl mx-auto px-6">
@@ -48,7 +51,10 @@ const MenuPreview = () => {
             <h2 className="text-sm font-bold tracking-[0.3em] text-[#006B3F] uppercase">Explore</h2>
             <h3 className="text-4xl md:text-5xl font-black text-black">Menu Preview</h3>
           </div>
-          <Button className="bg-black text-white hover:bg-[#CE1126] transition-colors rounded-none px-8 py-6 h-auto text-lg font-bold">
+          <Button 
+            onClick={() => navigate('/menu')}
+            className="bg-black text-white hover:bg-[#CE1126] transition-colors rounded-none px-8 py-6 h-auto text-lg font-bold"
+          >
             View Full Menu
             <ChevronRight className="ml-2 w-5 h-5" />
           </Button>
