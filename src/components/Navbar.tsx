@@ -34,6 +34,19 @@ const Navbar = () => {
     { name: 'Location', href: '#location' },
   ];
 
+  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    setIsMenuOpen(false);
+    
+    // Small delay to allow the menu to start closing before scrolling
+    setTimeout(() => {
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 300);
+  };
+
   return (
     <>
       <nav className={cn(
@@ -87,12 +100,12 @@ const Navbar = () => {
             <a
               key={link.name}
               href={link.href}
-              onClick={() => setIsMenuOpen(false)}
+              onClick={(e) => handleLinkClick(e, link.href)}
               className={cn(
                 "text-4xl md:text-6xl font-black text-white hover:text-[#FCD116] transition-all duration-300 transform hover:scale-110",
                 isMenuOpen ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
               )}
-              style={{ transitionDelay: `${index * 100}ms` }}
+              style={{ transitionDelay: isMenuOpen ? `${index * 100}ms` : '0ms' }}
             >
               {link.name}
             </a>
