@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { Phone, UtensilsCrossed } from 'lucide-react';
+import { Phone, UtensilsCrossed, ShieldCheck } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 const Hero = () => {
@@ -10,7 +10,6 @@ const Hero = () => {
 
   return (
     <section className="relative h-screen w-full overflow-hidden flex items-center">
-      {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img 
           src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=2070" 
@@ -31,8 +30,13 @@ const Hero = () => {
             Authentic <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-white/50">Ghanaian</span> Cuisine
           </h1>
           
-          <p className="text-lg md:text-xl text-white/80 max-w-lg animate-in fade-in slide-in-from-left duration-1000 delay-300">
-            Experience the rich flavors of traditional Ghanaian cooking at <span className="text-white font-bold">Accra Restaurant</span>. From our kitchen to your heart.
+          <div className="flex items-center gap-2 text-[#006B3F] font-bold bg-white/10 backdrop-blur-sm w-fit px-4 py-2 rounded-full animate-in fade-in slide-in-from-left duration-1000 delay-300">
+            <ShieldCheck className="w-5 h-5" />
+            <span className="uppercase tracking-widest text-xs">100% Halal Certified</span>
+          </div>
+          
+          <p className="text-lg md:text-xl text-white/80 max-w-lg animate-in fade-in slide-in-from-left duration-1000 delay-400">
+            Experience the rich flavors of traditional Ghanaian cooking at <span className="text-white font-bold">Accra Restaurant</span>. Proudly serving authentic Halal dishes in Toronto.
           </p>
           
           <div className="flex flex-wrap gap-4 pt-4 animate-in fade-in slide-in-from-bottom duration-1000 delay-500">
@@ -51,7 +55,6 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Decorative Flag Accents */}
       <div className="absolute bottom-0 left-0 w-full h-2 flex">
         <div className="flex-1 bg-[#CE1126]" />
         <div className="flex-1 bg-[#FCD116]" />

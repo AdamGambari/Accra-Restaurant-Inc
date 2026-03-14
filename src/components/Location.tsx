@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-import { MapPin, Phone, Clock, Mail } from 'lucide-react';
+import { MapPin, Phone, Clock } from 'lucide-react';
 
 const Location = () => {
   return (
@@ -20,7 +20,7 @@ const Location = () => {
                   <MapPin className="w-6 h-6 text-[#CE1126] shrink-0" />
                   <div>
                     <h4 className="font-bold text-lg mb-2">Address</h4>
-                    <p className="text-zinc-600">123 Heritage Way<br />Accra District, NY 10001</p>
+                    <p className="text-zinc-600">3300 Dufferin St, Unit G<br />Toronto, ON M6A 2T5</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
@@ -49,13 +49,12 @@ const Location = () => {
           </div>
 
           <div className="relative h-[400px] bg-zinc-200 grayscale">
-            {/* Placeholder for Google Maps */}
-            <div className="absolute inset-0 flex flex-col items-center justify-center text-zinc-400 p-8 text-center">
-              <MapPin className="w-12 h-12 mb-4 opacity-20" />
-              <p className="font-bold uppercase tracking-widest text-sm">Google Maps Placeholder</p>
-              <p className="text-xs mt-2">123 Heritage Way, Accra District, NY 10001</p>
-            </div>
-            {/* Decorative border */}
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2883.344444444444!2d-79.45!3d43.71!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b339999999999%3A0x9999999999999999!2s3300%20Dufferin%20St%2C%20North%20York%2C%20ON%20M6A%202T5!5e0!3m2!1sen!2sca!4v1600000000000!5m2!1sen!2sca" 
+              className="absolute inset-0 w-full h-full border-0"
+              allowFullScreen={true}
+              loading="lazy"
+            ></iframe>
             <div className="absolute inset-4 border border-black/5 pointer-events-none" />
           </div>
         </div>

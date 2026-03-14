@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-import { Instagram, Facebook, Twitter } from 'lucide-react';
+import { Instagram, Facebook, Twitter, ShieldCheck } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -20,9 +20,18 @@ const Footer = () => {
                 <div className="w-1.5 h-8 bg-[#006B3F]" />
               </div>
             </a>
-            <p className="text-white/50 max-w-sm leading-relaxed">
-              Bringing the authentic flavors and warm hospitality of Ghana to your table. Experience tradition, taste heritage.
-            </p>
+            <div className="space-y-4">
+              <p className="text-white/50 max-w-sm leading-relaxed">
+                Bringing the authentic flavors and warm hospitality of Ghana to Toronto. Experience tradition, taste heritage.
+              </p>
+              <div className="flex items-center gap-2 text-[#006B3F] font-bold text-sm">
+                <ShieldCheck className="w-4 h-4" />
+                <span className="uppercase tracking-widest">100% Halal Cuisine</span>
+              </div>
+              <p className="text-white/50 text-sm">
+                3300 Dufferin St, Unit G, Toronto, ON M6A 2T5
+              </p>
+            </div>
             <div className="flex gap-4">
               {[Instagram, Facebook, Twitter].map((Icon, i) => (
                 <a key={i} href="#" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-white hover:text-black transition-all">
@@ -37,7 +46,7 @@ const Footer = () => {
             <ul className="space-y-4 text-white/50">
               <li><a href="#story" className="hover:text-white transition-colors">Our Story</a></li>
               <li><a href="#dishes" className="hover:text-white transition-colors">Signature Dishes</a></li>
-              <li><a href="#menu" className="hover:text-white transition-colors">Full Menu</a></li>
+              <li><a href="/menu" className="hover:text-white transition-colors">Full Menu</a></li>
               <li><a href="#order" className="hover:text-white transition-colors">Order Online</a></li>
             </ul>
           </div>

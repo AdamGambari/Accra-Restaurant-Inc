@@ -31,10 +31,10 @@ const About = () => {
             
             <div className="space-y-6 text-gray-600 leading-relaxed text-lg">
               <p>
-                At <span className="text-black font-bold">Accra Restaurant</span>, we believe that food is the ultimate expression of culture. Our journey began with a simple mission: to bring the authentic, vibrant flavors of Ghana to our community.
+                At <span className="text-black font-bold">Accra Restaurant</span>, we believe that food is the ultimate expression of culture. Our journey began with a simple mission: to bring the authentic, vibrant flavors of Ghana to Toronto.
               </p>
               <p>
-                Every dish we serve is prepared using time-honored recipes passed down through generations. From the smoky aroma of our Jollof rice to the comforting warmth of our Fufu and soup, we use only the freshest ingredients and traditional spices.
+                Every dish we serve is <span className="text-black font-bold">100% Halal</span> and prepared using time-honored recipes passed down through generations. From the smoky aroma of our Jollof rice to the comforting warmth of our Fufu and soup, we use only the freshest ingredients and traditional spices.
               </p>
               <p>
                 Hospitality is at the core of Ghanaian culture, and it's at the heart of everything we do. When you step into Accra Restaurant, you're not just a customer—you're family.
@@ -52,7 +52,7 @@ const About = () => {
                 <div className="w-12 h-12 bg-[#CE1126]/10 rounded-full flex items-center justify-center mx-auto mb-2">
                   <div className="w-3 h-3 bg-[#CE1126] rounded-full" />
                 </div>
-                <p className="text-xs font-bold uppercase tracking-tighter">Fresh</p>
+                <p className="text-xs font-bold uppercase tracking-tighter">100% Halal</p>
               </div>
               <div className="text-center">
                 <div className="w-12 h-12 bg-[#006B3F]/10 rounded-full flex items-center justify-center mx-auto mb-2">
