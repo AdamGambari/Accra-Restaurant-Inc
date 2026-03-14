@@ -13,7 +13,7 @@ const Navbar = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -36,15 +36,21 @@ const Navbar = () => {
 
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
+    
+    // Close menu immediately
     setIsMenuOpen(false);
     
-    // Small delay to allow the menu to start closing before scrolling
-    setTimeout(() => {
-      const element = document.querySelector(href);
-      if (element) {
+    // Find element and scroll
+    const targetId = href.replace('#', '');
+    const element = document.getElementById(targetId);
+    
+    if (element) {
+      // We use a very slight delay to ensure the 'overflow: hidden' is removed 
+      // from the body before the browser attempts to scroll
+      requestAnimationFrame(() => {
         element.scrollIntoView({ behavior: 'smooth' });
-      }
-    }, 300);
+      });
+    }
   };
 
   return (
