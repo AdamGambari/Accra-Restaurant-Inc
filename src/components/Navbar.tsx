@@ -55,7 +55,7 @@ const Navbar = () => {
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#FCD116] transition-all duration-300 group-hover:w-full" />
             </a>
           ))}
-          <Button className="bg-[#CE1126] hover:bg-[#CE1126]/90 text-white rounded-none px-6">
+          <Button className="bg-[#006B3F] hover:bg-[#006B3F]/90 text-white rounded-none px-6">
             <Phone className="w-4 h-4 mr-2" />
             Call to Order
           </Button>
@@ -85,7 +85,7 @@ const Navbar = () => {
             {link.name}
           </a>
         ))}
-        <Button className="bg-[#CE1126] hover:bg-[#CE1126]/90 text-white rounded-none px-8 py-6 text-lg">
+        <Button className="bg-[#006B3F] hover:bg-[#006B3F]/90 text-white rounded-none px-8 py-6 text-lg">
           Call to Order
         </Button>
       </div>

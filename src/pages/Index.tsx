@@ -10,7 +10,6 @@ import OrderSection from '@/components/OrderSection';
 import Gallery from '@/components/Gallery';
 import Location from '@/components/Location';
 import Footer from '@/components/Footer';
-import { MadeWithDyad } from "@/components/made-with-dyad";
 
 const Index = () => {
   return (
@@ -28,7 +27,6 @@ const Index = () => {
       </main>
 
       <Footer />
-      <MadeWithDyad />
     </div>
   );
 };
