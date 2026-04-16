@@ -7,35 +7,42 @@ import { useNavigate } from 'react-router-dom';
 
 const categories = [
   {
+    title: "Drinks",
+    items: [
+      { name: "Sobolo", price: "$6.00", desc: "Sobolo Special—chilled hibiscus with a spicy kick" },
+      { name: "Amoduro", price: "$6.00", desc: "Hausa Beer—ginger, lemon, and spice; shake well" },
+      { name: "Burkina", price: "$6.00", desc: "Millet and yogurt drink with cloves; shake well" },
+      { name: "Fura", price: "$6.00", desc: "Fura Special—spicy millet drink with ginger and sour cream" },
+      { name: "Water", price: "$2.50", desc: "Bottled water" }
+    ]
+  },
+  {
     title: "Main Dishes",
     items: [
-      { name: "Assorted Jollof", price: "$22", desc: "Beef, chicken, and shrimp" },
-      { name: "Red Red", price: "$15", desc: "Beans stew with fried plantain" },
-      { name: "Kenkey & Fish", price: "$18", desc: "Served with hot pepper sauce" }
+      { name: "Jollof Rice", price: "$20", desc: "Smoky Jollof with grilled chicken and plantain" },
+      { name: "Waakye", price: "$20", desc: "Rice and beans with sorghum leaves, shito, wele, and egg" }
     ]
   },
   {
     title: "Soups & Stews",
     items: [
-      { name: "Groundnut Soup", price: "$14", desc: "Creamy peanut base with meat" },
-      { name: "Okra Stew", price: "$16", desc: "Fresh okra with seafood" },
-      { name: "Palava Sauce", price: "$15", desc: "Spinach and melon seed stew" }
+      { name: "Fufu with Light Soup", price: "$25", desc: "Pounded yam and plantain in rich light soup with goat" },
+      { name: "Zaafi (Dieho)", price: "$25", desc: "Steamed dough with ayoyo soup and meat stew" },
+      { name: "Omotua", price: "$30", desc: "Classic swallow with palm nut or groundnut soup and assorted protein" },
+      { name: "Banku & Okra Stew", price: "$25", desc: "Fermented corn dough with okra stew, fish, and meat" },
+      { name: "Fufu With Goat Light Soup", price: "$25", desc: "Fufu served with goat light soup" },
+      { name: "Groundnut Soup", price: "$25", desc: "Creamy peanut soup with tender meat" },
+      { name: "Okra Soup", price: "$25", desc: "Fresh okra in a savory, well-seasoned broth" }
     ]
   },
   {
     title: "Sides & Extras",
     items: [
-      { name: "Extra Plantain", price: "$5", desc: "Sweet and ripe" },
-      { name: "Shito Sauce", price: "$3", desc: "Spicy black pepper sauce" },
-      { name: "Boiled Yam", price: "$7", desc: "Soft and tender" }
-    ]
-  },
-  {
-    title: "Drinks",
-    items: [
-      { name: "Sobolo", price: "$5", desc: "Hibiscus and ginger drink" },
-      { name: "Asaana", price: "$5", desc: "Caramelized corn drink" },
-      { name: "Palm Wine", price: "$8", desc: "Fresh and traditional" }
+      { name: "Extra Plantain", price: "$5.99", desc: "Sweet fried ripe plantain" },
+      { name: "Shito Sauce", price: "$3.99", desc: "Spicy black pepper sauce" },
+      { name: "Boiled Yam", price: "$7.99", desc: "Soft, hearty yam" },
+      { name: "Stew Sauce", price: "$4.99", desc: "Rich tomato stew for rice or sides" },
+      { name: "Garri", price: "$3.99", desc: "Toasted cassava for soups and stews" }
     ]
   }
 ];

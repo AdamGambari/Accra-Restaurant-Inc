@@ -5,6 +5,7 @@ import { Menu, X, Phone } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { useNavigate, useLocation, Link } from 'react-router-dom';
+import { PHONE_TEL } from "@/constants/contact";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -80,9 +81,11 @@ const Navbar = () => {
           </Link>
 
           <div className="flex items-center gap-6 z-50">
-            <Button className="hidden sm:flex bg-[#006B3F] hover:bg-[#006B3F]/90 text-white rounded-none px-6">
-              <Phone className="w-4 h-4 mr-2" />
-              Call to Order
+            <Button asChild className="hidden sm:flex bg-[#006B3F] hover:bg-[#006B3F]/90 text-white rounded-none px-6">
+              <a href={PHONE_TEL} className="inline-flex items-center">
+                <Phone className="w-4 h-4 mr-2" />
+                Call to Order
+              </a>
             </Button>
             
             <button 
@@ -126,9 +129,15 @@ const Navbar = () => {
             "mt-8 transition-all duration-500 delay-300",
             isMenuOpen ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
           )}>
-            <Button className="bg-[#006B3F] hover:bg-[#006B3F]/90 text-white rounded-none px-12 py-8 text-xl font-bold">
-              <Phone className="w-6 h-6 mr-3" />
-              Call to Order
+            <Button asChild className="bg-[#006B3F] hover:bg-[#006B3F]/90 text-white rounded-none px-12 py-8 text-xl font-bold">
+              <a
+                href={PHONE_TEL}
+                className="inline-flex items-center"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                <Phone className="w-6 h-6 mr-3" />
+                Call to Order
+              </a>
             </Button>
           </div>
         </div>

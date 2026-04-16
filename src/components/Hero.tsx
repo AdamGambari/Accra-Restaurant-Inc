@@ -4,6 +4,8 @@ import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Phone, UtensilsCrossed, ShieldCheck } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import heroGhanaianCuisine from "@/assets/hero-ghanaian-cuisine.png";
+import { PHONE_TEL } from "@/constants/contact";
 
 const Hero = () => {
   const navigate = useNavigate();
@@ -11,12 +13,12 @@ const Hero = () => {
   return (
     <section className="relative h-screen w-full overflow-hidden flex items-center">
       <div className="absolute inset-0 z-0">
-        <img 
-          src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=2070" 
-          alt="Ghanaian Cuisine" 
-          className="w-full h-full object-cover"
+        <img
+          src={heroGhanaianCuisine}
+          alt="Traditional Ghanaian dishes — fufu light soup, kontomire, waakye, jollof, and banku"
+          className="w-full h-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/75 to-black/30" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 w-full">
@@ -47,9 +49,11 @@ const Hero = () => {
               <UtensilsCrossed className="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform" />
               View Menu
             </Button>
-            <Button className="bg-[#006B3F] hover:bg-[#006B3F]/90 text-white rounded-none px-8 py-6 text-lg font-bold">
-              <Phone className="w-5 h-5 mr-2" />
-              Call to Order
+            <Button asChild className="bg-[#006B3F] hover:bg-[#006B3F]/90 text-white rounded-none px-8 py-6 text-lg font-bold">
+              <a href={PHONE_TEL} className="inline-flex items-center">
+                <Phone className="w-5 h-5 mr-2" />
+                Call to Order
+              </a>
             </Button>
           </div>
         </div>

@@ -6,51 +6,46 @@ import Footer from '@/components/Footer';
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Utensils } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { PHONE_DISPLAY, PHONE_TEL } from "@/constants/contact";
 
 const menuData = [
   {
-    category: "Starters & Small Bites",
+    category: "Drinks",
     items: [
-      { name: "Kelewele", price: "$8.99", desc: "Spicy fried plantain cubes seasoned with ginger and chili." },
-      { name: "Meat Pie", price: "$4.50", desc: "Flaky pastry filled with seasoned minced beef and vegetables." },
-      { name: "Spring Rolls", price: "$6.99", desc: "Crispy rolls filled with fresh vegetables and shrimp." },
-      { name: "Fried Yam & Turkey", price: "$12.99", desc: "Golden fried yam chunks served with spicy turkey wings." }
+      { name: "Sobolo", price: "$6.00", desc: "Sobolo Special—chilled hibiscus with a spicy kick" },
+      { name: "Amoduro", price: "$6.00", desc: "Hausa Beer—ginger, lemon, and spice; shake well" },
+      { name: "Burkina", price: "$6.00", desc: "Millet and yogurt drink with cloves; shake well" },
+      { name: "Fura", price: "$6.00", desc: "Fura Special—spicy millet drink with ginger and sour cream" },
+      { name: "Water", price: "$2.50", desc: "Bottled water" }
     ]
   },
   {
-    category: "Signature Rice Dishes",
+    category: "Main Dishes",
     items: [
-      { name: "Accra Jollof Rice", price: "$18.99", desc: "Smoky, spicy rice served with grilled chicken and plantain." },
-      { name: "Waakye Special", price: "$19.99", desc: "Rice and beans with shito, wele, egg, and fried fish." },
-      { name: "Fried Rice", price: "$16.99", desc: "Ghanaian style fried rice with mixed veggies and beef." },
-      { name: "Angwa Mo", price: "$14.99", desc: "Traditional oil rice served with fried eggs and sardines." }
-    ]
-  },
-  {
-    category: "Traditional Swallows",
-    items: [
-      { name: "Fufu & Light Soup", price: "$20.99", desc: "Pounded yam/plantain in a spicy tomato broth with goat meat." },
-      { name: "Banku & Tilapia", price: "$22.99", desc: "Fermented corn dough with large grilled tilapia and pepper." },
-      { name: "Kenkey & Fried Fish", price: "$17.99", desc: "Fermented corn dumplings with fried fish and hot shito." },
-      { name: "Eba & Okra Stew", price: "$19.99", desc: "Gari swallow served with rich seafood okra stew." }
+      { name: "Jollof Rice", price: "$20", desc: "Smoky Jollof with grilled chicken and plantain" },
+      { name: "Waakye", price: "$20", desc: "Rice and beans with sorghum leaves, shito, wele, and egg" }
     ]
   },
   {
     category: "Soups & Stews",
     items: [
-      { name: "Groundnut Soup", price: "$15.99", desc: "Creamy peanut soup with choice of meat or fish." },
-      { name: "Palava Sauce", price: "$16.99", desc: "Spinach and melon seed stew served with boiled yam." },
-      { name: "Red Red", price: "$14.99", desc: "Black-eyed pea stew served with fried ripe plantains." },
-      { name: "Garden Egg Stew", price: "$15.99", desc: "Traditional eggplant stew with steamed fish." }
+      { name: "Fufu with Light Soup", price: "$25", desc: "Pounded yam and plantain in rich light soup with goat" },
+      { name: "Zaafi (Dieho)", price: "$25", desc: "Steamed dough with ayoyo soup and meat stew" },
+      { name: "Omotua", price: "$30", desc: "Classic swallow with palm nut or groundnut soup and assorted protein" },
+      { name: "Banku & Okra Stew", price: "$25", desc: "Fermented corn dough with okra stew, fish, and meat" },
+      { name: "Fufu With Goat Light Soup", price: "$25", desc: "Fufu served with goat light soup" },
+      { name: "Groundnut Soup", price: "$25", desc: "Creamy peanut soup with tender meat" },
+      { name: "Okra Soup", price: "$25", desc: "Fresh okra in a savory, well-seasoned broth" }
     ]
   },
   {
-    category: "Beverages",
+    category: "Sides & Extras",
     items: [
-      { name: "Sobolo", price: "$5.00", desc: "Refreshing hibiscus and ginger infusion." },
-      { name: "Asaana", price: "$5.00", desc: "Traditional caramelized corn drink." },
-      { name: "Palm Wine", price: "$8.00", desc: "Freshly tapped traditional palm wine." },
-      { name: "Supermalt", price: "$4.50", desc: "Classic non-alcoholic malt drink." }
+      { name: "Extra Plantain", price: "$5.99", desc: "Sweet fried ripe plantain" },
+      { name: "Shito Sauce", price: "$3.99", desc: "Spicy black pepper sauce" },
+      { name: "Boiled Yam", price: "$7.99", desc: "Soft, hearty yam" },
+      { name: "Stew Sauce", price: "$4.99", desc: "Rich tomato stew for rice or sides" },
+      { name: "Garri", price: "$3.99", desc: "Toasted cassava for soups and stews" }
     ]
   }
 ];
@@ -106,8 +101,8 @@ const Menu = () => {
           <div className="mt-24 p-12 bg-black text-white text-center space-y-6">
             <h3 className="text-3xl font-black">Ready to taste the tradition?</h3>
             <p className="text-white/60 max-w-md mx-auto">Call us now to place your order for pickup or delivery.</p>
-            <Button className="bg-[#006B3F] hover:bg-[#006B3F]/90 text-white rounded-none px-12 py-8 text-xl font-bold">
-              (123) 456-7890
+            <Button asChild className="bg-[#006B3F] hover:bg-[#006B3F]/90 text-white rounded-none px-12 py-8 text-xl font-bold">
+              <a href={PHONE_TEL}>{PHONE_DISPLAY}</a>
             </Button>
           </div>
         </div>

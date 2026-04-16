@@ -2,43 +2,63 @@
 
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
+import signatureJollofRice from "@/assets/signature-jollof-rice.png";
+import fufuWithLightSoup from "@/assets/FUFU.jpg";
+import waakye from "@/assets/WAAKYE.jpg";
+import zaafiDieho from "@/assets/zaafi-dieho.png";
+import burkina from "@/assets/BURKINA.jpg";
+import fura from "@/assets/FURA.jpg";
+import hausaBeer from "@/assets/HAUSA-BEER.jpg";
+import sobolo from "@/assets/SOBOLO.jpg";
 
 const dishes = [
   {
     name: "Jollof Rice",
     description: "Our world-famous smoky Jollof rice served with spicy grilled chicken and fried plantain.",
-    image: "https://images.unsplash.com/photo-1628294895950-9805252327bc?auto=format&fit=crop&q=80&w=1000",
-    price: "$18.99"
+    image: signatureJollofRice,
+    price: "$20"
   },
   {
     name: "Waakye",
     description: "Traditional rice and beans cooked with sorghum leaves, served with shito, wele, and egg.",
-    image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=80&w=1000",
-    price: "$16.99"
+    image: waakye,
+    price: "$20"
   },
   {
     name: "Fufu with Light Soup",
     description: "Pounded yam and plantain served in a rich, spicy tomato-based soup with goat meat.",
-    image: "https://images.unsplash.com/photo-1512058560366-cd2427ffbb62?auto=format&fit=crop&q=80&w=1000",
-    price: "$20.99"
+    image: fufuWithLightSoup,
+    price: "$25"
   },
   {
-    name: "Banku with Tilapia",
-    description: "Fermented corn and cassava dough served with large grilled tilapia and fresh pepper sauce.",
-    image: "https://images.unsplash.com/photo-1580476262798-bddd9f4b7369?auto=format&fit=crop&q=80&w=1000",
-    price: "$22.99"
+    name: "Zaafi (Dieho)",
+    description: "Steamed corn and cassava dough with ayoyo soup, savory meat stew, and egg—a northern Ghanaian favorite.",
+    image: zaafiDieho,
+    price: "$25"
   },
   {
-    name: "Fried Plantain",
-    description: "Sweet, ripe plantains fried to golden perfection. The perfect side for any meal.",
-    image: "https://images.unsplash.com/photo-1604329760661-e71dc83f8f26?auto=format&fit=crop&q=80&w=1000",
-    price: "$6.99"
+    name: "Burkina",
+    description: "Our signature millet yogurt drink—creamy, lightly sweetened, and spiced with cloves. Shake well and enjoy cold.",
+    image: burkina,
+    price: "$6.00"
   },
   {
-    name: "Kelewele",
-    description: "Spicy fried plantain cubes seasoned with ginger, onions, and chili peppers.",
-    image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&q=80&w=1000",
-    price: "$8.99"
+    name: "Fura",
+    description: "Fura Special—our healthy spicy millet drink with ginger, black pepper, cloves, cayenne, and sour cream. Shake well before serving cold.",
+    image: fura,
+    price: "$6.00"
+  },
+  {
+    name: "Hausa Beer",
+    description: "Amoduro—our healthy spicy ginger and lemon drink. Rich, refreshing, and full of flavor. Shake well before enjoying cold.",
+    image: hausaBeer,
+    price: "$6.00"
+  },
+  {
+    name: "Sobolo",
+    description: "Sobolo Special—traditional chilled hibiscus drink, bold and refreshing with a spicy kick. Shake well before enjoying cold.",
+    image: sobolo,
+    price: "$6.00"
   }
 ];
 

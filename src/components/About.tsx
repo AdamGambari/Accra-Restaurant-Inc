@@ -1,6 +1,7 @@
 "use client";
 
 import React from 'react';
+import authorImage from "@/assets/AUTHOR.jpg";
 
 const About = () => {
   return (
@@ -10,10 +11,10 @@ const About = () => {
           <div className="relative">
             <div className="absolute -top-4 -left-4 w-24 h-24 border-t-4 border-l-4 border-[#CE1126] z-10" />
             <div className="absolute -bottom-4 -right-4 w-24 h-24 border-b-4 border-r-4 border-[#006B3F] z-10" />
-            <img 
-              src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&q=80&w=2070" 
-              alt="Our Chef" 
-              className="w-full aspect-[4/5] object-cover grayscale hover:grayscale-0 transition-all duration-700 shadow-2xl"
+            <img
+              src={authorImage}
+              alt="Traditional food preparation at Accra Restaurant"
+              className="w-full aspect-[4/5] object-cover shadow-2xl"
             />
             <div className="absolute bottom-8 left-8 bg-black text-white p-6 max-w-[200px]">
               <p className="text-3xl font-black leading-none">20+</p>

@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { Phone, Truck, ShoppingBag, Clock } from 'lucide-react';
+import { PHONE_DISPLAY, PHONE_TEL } from "@/constants/contact";
 
 const OrderSection = () => {
   return (
@@ -28,7 +29,7 @@ const OrderSection = () => {
 
               <div className="flex flex-col sm:flex-row gap-6">
                 <a 
-                  href="tel:+1234567890" 
+                  href={PHONE_TEL} 
                   className="flex items-center gap-4 bg-white text-black p-4 hover:bg-[#FCD116] transition-colors group"
                 >
                   <div className="w-12 h-12 bg-black text-white flex items-center justify-center">
@@ -36,7 +37,7 @@ const OrderSection = () => {
                   </div>
                   <div>
                     <p className="text-[10px] uppercase tracking-widest font-bold text-black/60">Call to Order</p>
-                    <p className="text-xl font-black">(123) 456-7890</p>
+                    <p className="text-xl font-black">{PHONE_DISPLAY}</p>
                   </div>
                 </a>
               </div>
@@ -44,15 +45,24 @@ const OrderSection = () => {
 
             <div className="space-y-8">
               <h4 className="text-xl font-bold border-b border-white/10 pb-4">Available on Delivery Platforms</h4>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {[
-                  { name: 'Uber Eats', color: 'hover:bg-[#06C167]' },
-                  { name: 'SkipTheDishes', color: 'hover:bg-[#FF0000]' },
-                  { name: 'DoorDash', color: 'hover:bg-[#FF3008]' }
+                  {
+                    name: 'Uber Eats',
+                    color: 'hover:bg-[#06C167]',
+                    href: 'https://www.ubereats.com/ca/store/accra-restaurant-halal-cuisine/36Cff5RpW8K5-Q2ObKlh8A?from_challenge=1'
+                  },
+                  {
+                    name: 'DoorDash',
+                    color: 'hover:bg-[#FF3008]',
+                    href: 'https://www.doordash.com/store/accra-restaurant-inc-north-york-40177101/100408346/'
+                  }
                 ].map((platform) => (
                   <a 
                     key={platform.name}
-                    href="#" 
+                    href={platform.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className={`bg-zinc-900 p-6 flex flex-col items-center justify-center gap-4 transition-all duration-300 group ${platform.color}`}
                   >
                     <ShoppingBag className="w-8 h-8 text-white/40 group-hover:text-white" />

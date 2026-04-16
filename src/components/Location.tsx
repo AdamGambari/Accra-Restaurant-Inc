@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { MapPin, Phone, Clock } from 'lucide-react';
+import { PHONE_DISPLAY, PHONE_TEL } from "@/constants/contact";
 
 const Location = () => {
   return (
@@ -27,7 +28,9 @@ const Location = () => {
                   <Phone className="w-6 h-6 text-[#FCD116] shrink-0" />
                   <div>
                     <h4 className="font-bold text-lg mb-2">Contact</h4>
-                    <p className="text-zinc-600">(123) 456-7890<br />hello@accrarestaurant.com</p>
+                    <p className="text-zinc-600">
+                      <a href={PHONE_TEL} className="hover:text-[#CE1126] transition-colors">{PHONE_DISPLAY}</a>
+                    </p>
                   </div>
                 </div>
               </div>
@@ -38,9 +41,7 @@ const Location = () => {
                   <div>
                     <h4 className="font-bold text-lg mb-2">Hours</h4>
                     <ul className="text-zinc-600 space-y-1">
-                      <li className="flex justify-between gap-4"><span>Mon - Thu:</span> <span>11am - 9pm</span></li>
-                      <li className="flex justify-between gap-4"><span>Fri - Sat:</span> <span>11am - 11pm</span></li>
-                      <li className="flex justify-between gap-4"><span>Sunday:</span> <span>12pm - 8pm</span></li>
+                      <li className="flex justify-between gap-4"><span>Mon - Sun:</span> <span>10am - 9pm</span></li>
                     </ul>
                   </div>
                 </div>
