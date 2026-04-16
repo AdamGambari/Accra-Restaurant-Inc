@@ -44,14 +44,14 @@ const About = () => {
 
             <div className="flex gap-8 pt-4">
               <div className="text-center">
-                <div className="w-12 h-12 bg-[#FCD116]/10 rounded-full flex items-center justify-center mx-auto mb-2">
-                  <div className="w-3 h-3 bg-[#FCD116] rounded-full" />
+                <div className="w-12 h-12 bg-[#CE1126]/10 rounded-full flex items-center justify-center mx-auto mb-2">
+                  <div className="w-3 h-3 bg-[#CE1126] rounded-full" />
                 </div>
                 <p className="text-xs font-bold uppercase tracking-tighter">Authentic</p>
               </div>
               <div className="text-center">
-                <div className="w-12 h-12 bg-[#CE1126]/10 rounded-full flex items-center justify-center mx-auto mb-2">
-                  <div className="w-3 h-3 bg-[#CE1126] rounded-full" />
+                <div className="w-12 h-12 bg-[#FCD116]/10 rounded-full flex items-center justify-center mx-auto mb-2">
+                  <div className="w-3 h-3 bg-[#FCD116] rounded-full" />
                 </div>
                 <p className="text-xs font-bold uppercase tracking-tighter">100% Halal</p>
               </div>

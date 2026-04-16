@@ -9,8 +9,8 @@ const categories = [
   {
     title: "Drinks",
     items: [
-      { name: "Sobolo", price: "$6.00", desc: "Sobolo Special—chilled hibiscus with a spicy kick" },
-      { name: "Amoduro", price: "$6.00", desc: "Hausa Beer—ginger, lemon, and spice; shake well" },
+      { name: "Sobolo", price: "$5.00", desc: "Sobolo Special—chilled hibiscus with a spicy kick" },
+      { name: "Amoduro", price: "$5.00", desc: "Hausa Beer—ginger, lemon, and spice; shake well" },
       { name: "Burkina", price: "$6.00", desc: "Millet and yogurt drink with cloves; shake well" },
       { name: "Fura", price: "$6.00", desc: "Fura Special—spicy millet drink with ginger and sour cream" },
       { name: "Water", price: "$2.50", desc: "Bottled water" }
@@ -27,7 +27,7 @@ const categories = [
     title: "Soups & Stews",
     items: [
       { name: "Fufu with Light Soup", price: "$25", desc: "Pounded yam and plantain in rich light soup with goat" },
-      { name: "Zaafi (Dieho)", price: "$25", desc: "Steamed dough with ayoyo soup and meat stew" },
+      { name: "Tuo Zaafi (Dieho)", price: "$25", desc: "Steamed dough with ayoyo soup and meat stew" },
       { name: "Omotua", price: "$30", desc: "Classic swallow with palm nut or groundnut soup and assorted protein" },
       { name: "Banku & Okra Stew", price: "$25", desc: "Fermented corn dough with okra stew, fish, and meat" },
       { name: "Fufu With Goat Light Soup", price: "$25", desc: "Fufu served with goat light soup" },

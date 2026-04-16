@@ -25,7 +25,7 @@ const Hero = () => {
         <div className="max-w-2xl space-y-6">
           <div className="flex items-center gap-4 animate-in fade-in slide-in-from-left duration-700">
             <div className="h-[2px] w-12 bg-[#FCD116]" />
-            <span className="text-[#FCD116] font-bold tracking-widest uppercase text-sm">Welcome to Accra</span>
+            <span className="text-[#FCD116] font-bold tracking-widest uppercase text-sm">Welcome to Ghana</span>
           </div>
           
           <h1 className="text-5xl md:text-7xl font-black text-white leading-tight animate-in fade-in slide-in-from-left duration-1000 delay-200">

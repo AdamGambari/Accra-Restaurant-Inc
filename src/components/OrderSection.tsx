@@ -30,14 +30,18 @@ const OrderSection = () => {
               <div className="flex flex-col sm:flex-row gap-6">
                 <a 
                   href={PHONE_TEL} 
-                  className="flex items-center gap-4 bg-white text-black p-4 hover:bg-[#FCD116] transition-colors group"
+                  className="flex w-full min-w-0 items-center gap-4 bg-white text-black p-4 hover:bg-[#FCD116] transition-colors group"
                 >
-                  <div className="w-12 h-12 bg-black text-white flex items-center justify-center">
-                    <Phone className="w-6 h-6" />
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center bg-black text-white">
+                    <Phone className="h-6 w-6" />
                   </div>
-                  <div>
-                    <p className="text-[10px] uppercase tracking-widest font-bold text-black/60">Call to Order</p>
-                    <p className="text-xl font-black">{PHONE_DISPLAY}</p>
+                  <div className="flex-1">
+                    <p className="text-[10px] font-bold uppercase tracking-widest text-black/60">
+                      Call to Order
+                    </p>
+                    <p className="text-lg font-black tabular-nums tracking-tight whitespace-nowrap sm:text-xl">
+                      {PHONE_DISPLAY}
+                    </p>
                   </div>
                 </a>
               </div>

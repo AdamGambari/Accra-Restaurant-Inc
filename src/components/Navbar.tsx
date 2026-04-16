@@ -68,15 +68,22 @@ const Navbar = () => {
         isScrolled || isMenuOpen || location.pathname !== '/' ? "bg-black/95 backdrop-blur-md py-3 shadow-lg" : "bg-transparent"
       )}>
         <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-2 group z-50">
-            <div className="flex flex-col leading-none">
+          <Link to="/" className="flex items-center gap-3 group z-50">
+            <img
+              src="/ACCRA-R-INC-LOGO.png"
+              alt=""
+              width={96}
+              height={96}
+              className="h-16 w-16 sm:h-20 sm:w-20 md:h-24 md:w-24 object-contain shrink-0 group-hover:opacity-90 transition-opacity"
+            />
+            <div className="flex flex-col leading-none gap-0.5">
               <span className="text-2xl font-black tracking-tighter text-white">ACCRA</span>
-              <span className="text-[10px] tracking-[0.3em] text-white/70 font-medium">RESTAURANT</span>
-            </div>
-            <div className="flex gap-0.5 ml-1">
-              <div className="w-1 h-6 bg-[#CE1126]" />
-              <div className="w-1 h-6 bg-[#FCD116]" />
-              <div className="w-1 h-6 bg-[#006B3F]" />
+              <div className="flex flex-nowrap items-baseline gap-x-2">
+                <span className="text-[10px] tracking-[0.3em] text-white/70 font-medium">RESTAURANT</span>
+                <span className="text-[9px] tracking-[0.2em] text-white/60 font-medium shrink-0">
+                  (HALAL CUISINE)
+                </span>
+              </div>
             </div>
           </Link>
 

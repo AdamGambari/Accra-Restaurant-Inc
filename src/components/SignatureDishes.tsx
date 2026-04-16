@@ -38,7 +38,7 @@ const dishes = [
     price: "$25"
   },
   {
-    name: "Zaafi (Dieho)",
+    name: "Tuo Zaafi (Dieho)",
     description: "Steamed corn and cassava dough with ayoyo soup, savory meat stew, and egg—a northern Ghanaian favorite.",
     image: zaafiDieho,
     price: "$25"
@@ -59,13 +59,13 @@ const dishes = [
     name: "Hausa Beer",
     description: "Amoduro—our healthy spicy ginger and lemon drink. Rich, refreshing, and full of flavor. Shake well before enjoying cold.",
     image: hausaBeer,
-    price: "$6.00"
+    price: "$5.00"
   },
   {
     name: "Sobolo",
     description: "Sobolo Special—traditional chilled hibiscus drink, bold and refreshing with a spicy kick. Shake well before enjoying cold.",
     image: sobolo,
-    price: "$6.00"
+    price: "$5.00"
   }
 ];
 

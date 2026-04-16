@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-import { ShieldCheck } from 'lucide-react';
+import { ShieldCheck, Instagram } from 'lucide-react';
 import { useNavigate, useLocation, Link } from 'react-router-dom';
 
 const TikTokIcon = ({ size = 20 }: { size?: number }) => (
@@ -65,6 +65,15 @@ const Footer = () => {
               </p>
             </div>
             <div className="flex gap-4">
+              <a
+                href="https://www.instagram.com/accra_restaurant/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-white hover:text-black transition-all"
+                aria-label="Accra Restaurant on Instagram"
+              >
+                <Instagram className="w-5 h-5" aria-hidden />
+              </a>
               <a
                 href="https://www.tiktok.com/@accra.restaurant2"
                 target="_blank"
