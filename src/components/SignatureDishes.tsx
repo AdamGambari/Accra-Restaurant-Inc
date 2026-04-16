@@ -29,7 +29,7 @@ const dishes = [
     name: "Omotua",
     description: "Classic swallow with palm nut or groundnut soup and assorted protein.",
     image: omotua,
-    price: "$30"
+    price: "$25"
   },
   {
     name: "Fufu with Light Soup",

@@ -31,7 +31,7 @@ const menuData = [
     items: [
       { name: "Fufu with Light Soup", price: "$25", desc: "Pounded yam and plantain in rich light soup with goat" },
       { name: "Tuo Zaafi (Dieho)", price: "$25", desc: "Steamed dough with ayoyo soup and meat stew" },
-      { name: "Omotua", price: "$30", desc: "Classic swallow with palm nut or groundnut soup and assorted protein" },
+      { name: "Omotua", price: "$25", desc: "Classic swallow with palm nut or groundnut soup and assorted protein" },
       { name: "Banku & Okra Stew", price: "$25", desc: "Fermented corn dough with okra stew, fish, and meat" },
       { name: "Fufu With Goat Light Soup", price: "$25", desc: "Fufu served with goat light soup" },
       { name: "Groundnut Soup", price: "$25", desc: "Creamy peanut soup with tender meat" },
