@@ -18,7 +18,7 @@ const OrderSection = () => {
               <div className="space-y-4">
                 <h2 className="text-[#FCD116] font-bold tracking-widest uppercase text-sm">Order & Pickup</h2>
                 <h3 className="text-4xl md:text-5xl font-black leading-tight">
-                  Craving Accra? <br />
+                  Craving Ghana? <br />
                   <span className="text-white/60">We've got you covered.</span>
                 </h3>
               </div>

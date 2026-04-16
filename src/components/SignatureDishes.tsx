@@ -3,7 +3,8 @@
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import signatureJollofRice from "@/assets/signature-jollof-rice.png";
-import fufuWithLightSoup from "@/assets/FUFU.jpg";
+import omotua from "@/assets/OMOTUA.jpg";
+import fufuWithLightSoup from "@/assets/FUFUWITHMEAT.jpg";
 import waakye from "@/assets/WAAKYE.jpg";
 import zaafiDieho from "@/assets/zaafi-dieho.png";
 import burkina from "@/assets/BURKINA.jpg";
@@ -23,6 +24,12 @@ const dishes = [
     description: "Traditional rice and beans cooked with sorghum leaves, served with shito, wele, and egg.",
     image: waakye,
     price: "$20"
+  },
+  {
+    name: "Omotua",
+    description: "Classic swallow with palm nut or groundnut soup and assorted protein.",
+    image: omotua,
+    price: "$30"
   },
   {
     name: "Fufu with Light Soup",

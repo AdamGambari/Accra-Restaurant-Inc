@@ -43,19 +43,14 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-12 mb-16">
           <div className="space-y-8">
-            <Link to="/" className="flex items-center gap-4 group">
+            <Link to="/" className="inline-block group">
               <img
                 src="/ACCRA-R-INC-LOGO.png"
                 alt="Accra Restaurant Inc."
-                width={144}
-                height={144}
-                className="h-[7.5rem] w-[7.5rem] sm:h-32 sm:w-32 md:h-36 md:w-36 object-contain shrink-0 group-hover:opacity-90 transition-opacity"
+                width={208}
+                height={208}
+                className="h-40 w-40 sm:h-44 sm:w-44 md:h-52 md:w-52 object-contain shrink-0 group-hover:opacity-90 transition-opacity"
               />
-              <div className="flex gap-1" aria-hidden="true">
-                <div className="w-2 h-[7.5rem] sm:h-32 md:h-36 bg-[#CE1126]" />
-                <div className="w-2 h-[7.5rem] sm:h-32 md:h-36 bg-[#FCD116]" />
-                <div className="w-2 h-[7.5rem] sm:h-32 md:h-36 bg-[#006B3F]" />
-              </div>
             </Link>
             <div className="space-y-4">
               <p className="text-white/50 max-w-sm leading-relaxed">
