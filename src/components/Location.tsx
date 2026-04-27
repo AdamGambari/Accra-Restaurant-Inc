@@ -41,7 +41,34 @@ const Location = () => {
                   <div>
                     <h4 className="font-bold text-lg mb-2">Hours</h4>
                     <ul className="text-zinc-600 space-y-1">
-                      <li className="flex justify-between gap-4"><span>Mon - Sun:</span> <span>10am - 9pm</span></li>
+                      <li className="grid grid-cols-[max-content_1fr] items-baseline gap-x-4">
+                        <span className="font-medium">Sunday:</span>
+                        <span className="justify-self-end whitespace-nowrap">11 a.m. – 8 p.m.</span>
+                      </li>
+                      <li className="grid grid-cols-[max-content_1fr] items-baseline gap-x-4">
+                        <span className="font-medium">Monday:</span>
+                        <span className="justify-self-end whitespace-nowrap">10:30 a.m. – 9 p.m.</span>
+                      </li>
+                      <li className="grid grid-cols-[max-content_1fr] items-baseline gap-x-4">
+                        <span className="font-medium">Tuesday:</span>
+                        <span className="justify-self-end whitespace-nowrap">10:30 a.m. – 9 p.m.</span>
+                      </li>
+                      <li className="grid grid-cols-[max-content_1fr] items-baseline gap-x-4">
+                        <span className="font-medium">Wednesday:</span>
+                        <span className="justify-self-end whitespace-nowrap">10:30 a.m. – 9 p.m.</span>
+                      </li>
+                      <li className="grid grid-cols-[max-content_1fr] items-baseline gap-x-4">
+                        <span className="font-medium">Thursday:</span>
+                        <span className="justify-self-end whitespace-nowrap">10:30 a.m. – 9 p.m.</span>
+                      </li>
+                      <li className="grid grid-cols-[max-content_1fr] items-baseline gap-x-4">
+                        <span className="font-medium">Friday:</span>
+                        <span className="justify-self-end whitespace-nowrap">10:30 a.m. – 9 p.m.</span>
+                      </li>
+                      <li className="grid grid-cols-[max-content_1fr] items-baseline gap-x-4">
+                        <span className="font-medium">Saturday:</span>
+                        <span className="justify-self-end whitespace-nowrap">11 a.m. – 9 p.m.</span>
+                      </li>
                     </ul>
                   </div>
                 </div>
