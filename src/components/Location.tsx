@@ -47,7 +47,7 @@ const Location = () => {
                       </li>
                       <li className="grid grid-cols-[max-content_1fr] items-baseline gap-x-4">
                         <span className="font-medium">Monday:</span>
-                        <span className="justify-self-end whitespace-nowrap">10:30 a.m. – 9 p.m.</span>
+                        <span className="justify-self-end whitespace-nowrap">Closed</span>
                       </li>
                       <li className="grid grid-cols-[max-content_1fr] items-baseline gap-x-4">
                         <span className="font-medium">Tuesday:</span>
